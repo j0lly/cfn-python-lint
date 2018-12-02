@@ -130,6 +130,10 @@ NodeConstructor.add_constructor(
     u'tag:yaml.org,2002:null',
     NodeConstructor.construct_yaml_null_error)
 
+NodeConstructor.add_constructor(
+    u'tag:yaml.org,2002:timestamp',
+    NodeConstructor.construct_yaml_str)
+
 
 class MarkedLoader(Reader, Scanner, Parser, Composer, NodeConstructor, Resolver):
     """
